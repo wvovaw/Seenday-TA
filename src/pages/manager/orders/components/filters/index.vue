@@ -4,12 +4,14 @@
     <MainFilter />
   </div>
   <div class="filters__block">
+    <YearFilter />
   </div>
 </div>
 </template>
 
 <script setup lang="ts">
 import MainFilter from "./main-filter.vue";
+import YearFilter from "./year-filter.vue";
 </script>
 
 <style lang="scss" scoped>
