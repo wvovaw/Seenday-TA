@@ -1,21 +1,23 @@
 <template>
-  <InputDate v-model="date" placeholder="Период" />
-  <Search
-    v-model:search-type="searchType"
-    :search-types="searchTypes"
-    :search-query="searchQuery"
-  />
-  <ToggleGroup v-model="searchToggles" class="toggles" type="multiple">
-    <ToggleGroupItem
-      v-for="item of toggles"
-      :key="item.key"
-      color="gray"
-      :value="item.name"
-    >
-      <i v-if=item.icon class="icon-xs" :class="item.icon" />
-      <span v-else>{{item.name}}</span>
-    </ToggleGroupItem>
-  </ToggleGroup>
+  <div class="main-filter">
+    <InputDate v-model="date" placeholder="Период" />
+    <Search
+      v-model:search-type="searchType"
+      :search-types="searchTypes"
+      :search-query="searchQuery"
+    />
+    <ToggleGroup v-model="searchToggles" class="main-filter__toggles" type="multiple">
+      <ToggleGroupItem
+        v-for="item of toggles"
+        :key="item.key"
+        color="gray"
+        :value="item.name"
+      >
+        <i v-if=item.icon class="icon-xs" :class="item.icon" />
+        <span v-else>{{item.name}}</span>
+      </ToggleGroupItem>
+    </ToggleGroup>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -44,11 +46,3 @@ const toggles = reactive([
   { key: "8", name: "8", icon: "icon-ruble", value: false },
  ])
 </script>
-
-<style lang="scss">
-.toggles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-</style>

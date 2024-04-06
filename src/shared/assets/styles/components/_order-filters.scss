@@ -1,0 +1,37 @@
+@import "@/shared/assets/styles/components/block";
+
+.filters { 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+  &__block {
+    padding: 16px;
+    @extend .block;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+
+}
+
+.main-filter {
+  &__toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+.year-filter {
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  &__notice {
+    padding: 0;
+  }
+}
