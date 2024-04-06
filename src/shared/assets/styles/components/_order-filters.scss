@@ -13,7 +13,6 @@
   flex-direction: column;
   gap: 10px;
   }
-
 }
 
 .main-filter {
@@ -33,5 +32,18 @@
 
   &__notice {
     padding: 0;
+  }
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding-inline-start: 15px;
   }
 }
