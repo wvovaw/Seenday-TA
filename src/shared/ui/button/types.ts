@@ -8,7 +8,6 @@ export type ButtonIconProps = {
 
 export type ButtonProps = {
   tagname?: "button" | "label" | "div";
-  target?: NuxtLinkProps["target"];
   mode?: "normal" | "icon" | "text" | "tag";
   color?:
     | "green"
@@ -35,5 +34,11 @@ export type ButtonProps = {
   textOrientation?: "center" | "left";
   pending?: boolean;
   external?: NuxtLinkProps["external"];
-} & ButtonIconProps &
-  NuxtLinkProps;
+  to?: NuxtLinkProps["to"];
+  target?: NuxtLinkProps["target"];
+  rel?: NuxtLinkProps["rel"];
+  noRel?: NuxtLinkProps["noRel"];
+  prefetch?: NuxtLinkProps["prefetch"];
+  noPrefetch?: NuxtLinkProps["noPrefetch"];
+  prefetchedClass?: NuxtLinkProps["prefetchedClass"];
+} & ButtonIconProps;
