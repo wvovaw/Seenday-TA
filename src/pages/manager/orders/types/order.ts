@@ -45,6 +45,6 @@ export type Orders = Order[];
 
 export type OrdersApiResponse = {
   response: {
-    data: { orders: Orders };
+    data: { orders: Orders | null };
   };
 };

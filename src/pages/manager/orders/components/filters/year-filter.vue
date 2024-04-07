@@ -6,14 +6,13 @@
         size="l"
         width="full"
         color="purple"
-        :disabled="!selectedYear"
-        @click="emit('submit')"
+        @click="handleShow"
       >Показать</Button>
       <Button
         size="l"
         width="full"
         color="light-purple-reverse"
-        @click="selectedYear = undefined"
+        @click="handleReset"
       >Сбросить</Button>
     </div>
     <Notice class="year-filter__notice" color="transparent" size="extra-small">
@@ -36,14 +35,16 @@ const YEARS: SelectItems = [
 export type YearFilterModel = SelectItems[number]["value"] | null;
 
 const yearModel = defineModel<YearFilterModel>({ required: true });
-const emit = defineEmits<{
-  submit: [void];
-}>();
 
 const selectedYear = ref<string | undefined>();
-watch(selectedYear, (year) => {
-  if (year)
-    yearModel.value = year;
+
+function handleShow() {
+  if (selectedYear.value)
+    yearModel.value = selectedYear.value;
   else yearModel.value = null;
-})
+}
+function handleReset() {
+  selectedYear.value = undefined;
+  yearModel.value = null;
+}
 </script>

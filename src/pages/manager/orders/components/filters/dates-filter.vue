@@ -7,7 +7,7 @@ import { InputDate } from "~/shared/ui/inputs/input-date";
 
 export type DatesFilterModel = {
   date_start: Date | null;
-  date_end: Date | null;
+  date_finish: Date | null;
 };
 const datesModel = defineModel<DatesFilterModel>({ required: true });
 
@@ -15,7 +15,7 @@ const dates = ref<Date[]>();
 watch(dates, newDates => {
   if (newDates && newDates.length === 2) {
     datesModel.value.date_start = newDates[0];
-    datesModel.value.date_end = newDates[1];
+    datesModel.value.date_finish = newDates[1];
   }
 });
 </script>

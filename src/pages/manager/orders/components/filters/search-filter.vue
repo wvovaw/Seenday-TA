@@ -4,7 +4,9 @@
     v-model:search-query="searchQuery"
     :search-types="SEARCH_TYPES"
     select-display-value="icon"
-    @submit="emit('submit')"
+    @submit="handleSubmit"
+    @keypress.enter="handleSubmit"
+    @clear="handleClear"
   />
 </template>
 
@@ -25,14 +27,18 @@ export type SearchFilterModel = {
   search_value: string;
 };
 const searchModel = defineModel<SearchFilterModel>({ required: true });
-const emit = defineEmits<{
-  submit: [void];
-}>();
 
 const searchType = ref<keyof typeof SEARCH_TYPES>("order_number");
 const searchQuery = ref<string>("");
-watch([searchType, searchQuery], ([newST, newSQ]) => {
-  searchModel.value.search_type = newST;
-  searchModel.value.search_value = newSQ;
-});
+
+function handleSubmit() {
+  searchModel.value.search_type = searchType.value;
+  searchModel.value.search_value = searchQuery.value;
+}
+function handleClear() {
+  searchType.value = "order_number";
+  searchQuery.value = "";
+  searchModel.value.search_type = "";
+  searchModel.value.search_value = "";
+}
 </script>
