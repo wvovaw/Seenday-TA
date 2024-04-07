@@ -62,16 +62,16 @@ export default defineNuxtConfig({
       ],
 
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/lk/favicon.ico" },
-        { rel: "stylesheet", href: "/lk/fonts/open-sans-regular/stylesheet.css" },
-        { rel: "stylesheet", href: "/lk/fonts/open-sans-semibold/stylesheet.css" },
-        { rel: "stylesheet", href: "/lk/fonts/pt-sans-regular/stylesheet.css" },
-        { rel: "stylesheet", href: "/lk/fonts/FuturaPT-Bold/stylesheet.css" },
-        { rel: "stylesheet", href: "/lk/fonts/fontawesome/stylesheet.css" }
+        { rel: "icon", type: "image/x-icon", href: "/Seenday-TA/favicon.ico" },
+        { rel: "stylesheet", href: "/Seenday-TA/fonts/open-sans-regular/stylesheet.css" },
+        { rel: "stylesheet", href: "/Seenday-TA/fonts/open-sans-semibold/stylesheet.css" },
+        { rel: "stylesheet", href: "/Seenday-TA/fonts/pt-sans-regular/stylesheet.css" },
+        { rel: "stylesheet", href: "/Seenday-TA/fonts/FuturaPT-Bold/stylesheet.css" },
+        { rel: "stylesheet", href: "/Seenday-TA/fonts/fontawesome/stylesheet.css" }
       ]
     },
-    baseURL: "/Seenday-TA/lk/",
-    cdnURL: "/Seenday-TA/lk/"
+    baseURL: "/Seenday-TA/",
+    cdnURL: "/Seenday-TA/"
   },
 
   css: ["~/shared/assets/styles/main.scss"],
