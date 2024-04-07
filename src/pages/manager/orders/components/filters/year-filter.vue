@@ -1,22 +1,19 @@
 <template>
   <div class="year-filter">
-    <Select v-model="selectedYear" :items="YEARS" placeholder="Выберите год" label="Год" />
+    <Select
+      v-model="selectedYear"
+      :items="YEARS"
+      :placeholder="$t('year-filter.select-a-year')"
+      :label="$t('year-filter.year')"
+    />
     <div class="year-filter__buttons">
-      <Button
-        size="l"
-        width="full"
-        color="purple"
-        @click="handleShow"
-      >Показать</Button>
-      <Button
-        size="l"
-        width="full"
-        color="light-purple-reverse"
-        @click="handleReset"
-      >Сбросить</Button>
+      <Button size="l" width="full" color="purple" @click="handleShow">{{ $t("year-filter.show") }}</Button>
+      <Button size="l" width="full" color="light-purple-reverse" @click="handleReset">{{
+        $t("year-filter.reset")
+      }}</Button>
     </div>
     <Notice class="year-filter__notice" color="transparent" size="extra-small">
-      Обычный вывод показывает 250 заказов, чтобы снять ограничение и показывать до 5000 заказов, нужно выбрать год.
+      {{ $t("year-filter.notice") }}
     </Notice>
   </div>
 </template>
@@ -39,8 +36,7 @@ const yearModel = defineModel<YearFilterModel>({ required: true });
 const selectedYear = ref<string | undefined>();
 
 function handleShow() {
-  if (selectedYear.value)
-    yearModel.value = selectedYear.value;
+  if (selectedYear.value) yearModel.value = selectedYear.value;
   else yearModel.value = null;
 }
 function handleReset() {

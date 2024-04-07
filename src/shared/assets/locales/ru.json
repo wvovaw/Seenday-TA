@@ -1,1 +1,26 @@
-{}
+{
+  "no-orders": "Заказов ещё нет",
+  "dates-filter": {
+    "period": "Период"
+  },
+  "toggle-filter": {
+    "all": "Все"
+  },
+  "year-filter": {
+    "select-a-year": "Выберите год",
+    "year": "Год",
+    "show": "Показать",
+    "reset": "Сбросить",
+    "notice": "Обычный вывод показывает 250 заказов, чтобы снять ограничение и показывать до 5000 заказов, нужно выбрать год."
+  },
+  "search-filter": {
+    "types": {
+      "order_number": { "title": "Номер заказа", "placeholder": "Введите номер заказа" },
+      "psid": { "title": "Номер фотосессии", "placeholder": "Введите номер фотосессии" },
+      "client_id": { "title": "Клиент ID", "placeholder": "Введите ID клиента" },
+      "phone": { "title": "Телефон", "placeholder": "Введите телефон" },
+      "email": { "title": "Email", "placeholder": "Введите e-mail" },
+      "payer": { "title": "Плательщик, ребёнок", "placeholder": "Введите имя" }
+    }
+  }
+}

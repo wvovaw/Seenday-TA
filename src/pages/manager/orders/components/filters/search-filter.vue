@@ -13,13 +13,21 @@
 <script setup lang="ts">
 import { Search } from "~/shared/ui/search";
 
+const { t } = useI18n();
+
 const SEARCH_TYPES = {
-  order_number: { title: "Номер заказа", placeholder: "Введите номер заказа" },
-  psid: { title: "Номер фотосессии", placeholder: "Введите номер фотосессии" },
-  client_id: { title: "Клиент ID", placeholder: "Введите ID клиента" },
-  phone: { title: "Телефон", placeholder: "Введите телефон" },
-  email: { title: "Email", placeholder: "Введите e-mail" },
-  payer: { title: "Плательщик, ребёнок", placeholder: "Введите имя" }
+  order_number: {
+    title: t("search-filter.types.order_number.title"),
+    placeholder: t("search-filter.types.order_number.placeholder")
+  },
+  psid: { title: t("search-filter.types.psid.title"), placeholder: t("search-filter.types.psid.placeholder") },
+  client_id: {
+    title: t("search-filter.types.client_id.title"),
+    placeholder: t("search-filter.types.client_id.placeholder")
+  },
+  phone: { title: t("search-filter.types.phone.title"), placeholder: t("search-filter.types.phone.placeholder") },
+  email: { title: t("search-filter.types.email.title"), placeholder: t("search-filter.types.email.placeholder") },
+  payer: { title: t("search-filter.types.payer.title"), placeholder: t("search-filter.types.payer.placeholder") }
 };
 
 export type SearchFilterModel = {

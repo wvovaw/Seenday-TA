@@ -1,5 +1,5 @@
 <template>
-  <InputDate v-model="dates" placeholder="Период" range />
+  <InputDate v-model="dates" :placeholder="$t('dates-filter.period')" range />
 </template>
 
 <script setup lang="ts">

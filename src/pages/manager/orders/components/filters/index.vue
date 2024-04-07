@@ -5,10 +5,7 @@
       <SearchFilter v-model="filters.search" />
       <ToggleFilter v-model="filters.toggle" />
     </div>
-    <YearFilter
-      v-model="filters.year"
-      class="filters__block"
-    />
+    <YearFilter v-model="filters.year" class="filters__block" />
   </div>
 </template>
 

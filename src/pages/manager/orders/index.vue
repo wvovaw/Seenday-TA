@@ -1,12 +1,10 @@
 <template>
   <FixedLeftColumn>
     <template #fixed>
-      <Filters
-        v-model="filters"
-      />
+      <Filters v-model="filters" />
     </template>
     <OrdersList v-if="data.length > 0" :orders="data" />
-    <Empty v-else>Заказов ещё нет</Empty>
+    <Empty v-else>{{ $t("no-orders") }}</Empty>
   </FixedLeftColumn>
 </template>
 
@@ -37,8 +35,8 @@ const filters = reactive<FiltersModel>({
 
 const router = useRouter();
 const queryParams = useUrlSearchParams("history");
-const queryString  = computed(() => useRoute().fullPath.replace(/\/manager\/orders\??/, ""))
-watch(filters, async (f) => {
+const queryString = computed(() => useRoute().fullPath.replace(/\/manager\/orders\??/, ""));
+watch(filters, async f => {
   const updatedQueryParams = {
     date_start: f.dates.date_start ? f.dates.date_start.toISOString().split("T")[0].replace(/-/g, "") : undefined,
     date_finish: f.dates.date_finish ? f.dates.date_finish.toISOString().split("T")[0].replace(/-/g, "") : undefined,
@@ -48,13 +46,13 @@ watch(filters, async (f) => {
   };
 
   Object.assign(queryParams, updatedQueryParams);
-  
+
   await router.replace({
     query: queryParams
   });
 
   get(queryString.value);
-})
+});
 
 onMounted(() => {
   get();

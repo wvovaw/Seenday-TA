@@ -1,6 +1,6 @@
 <template>
   <ToggleGroup v-model="selectedItems" class="main-filter__toggles" type="multiple">
-    <Toggle v-model:pressed="selectAll" color="gray"> Все </Toggle>
+    <Toggle v-model:pressed="selectAll" color="gray">{{ $t("toggle-filter.all") }}</Toggle>
     <ToggleGroupItem v-for="item of TOGGLE_ITEMS" :key="item.key" color="gray" :value="item.name">
       <i v-if="item.icon" class="icon-xs" :class="item.icon" />
       <span v-else>{{ item.name }}</span>

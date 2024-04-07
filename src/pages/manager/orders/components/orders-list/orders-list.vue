@@ -1,7 +1,7 @@
 <template>
   <div class="orders-list">
     <StatusCard v-for="order of orders" :key="order.id" :order="order" status="success" class="orders-list__item">
-      №:{{ order.id }}
+      №: {{ order.id }}
     </StatusCard>
   </div>
 </template>

@@ -1,1 +1,44 @@
-{}
+{
+  "no-orders": "No orders yet",
+  "dates-filter": {
+    "period": "Period"
+  },
+  "toggle-filter": {
+    "all": "All"
+  },
+  "year-filter": {
+    "select-a-year": "Select year",
+    "year": "Year",
+    "show": "Show",
+    "reset": "Reset",
+    "notice": "The usual output shows 250 orders; to remove the limit and show up to 5000 orders, you need to select a year."
+  },
+  "search-filter": {
+    "types": {
+      "order_number": {
+        "title": "Order number",
+        "placeholder": "Enter your order number"
+      },
+      "psid": {
+        "title": "Photo session number",
+        "placeholder": "Enter photo session number"
+      },
+      "client_id": {
+        "title": "Client ID",
+        "placeholder": "Enter Client ID"
+      },
+      "phone": {
+        "title": "Telephone",
+        "placeholder": "Enter phone number"
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "Enter email"
+      },
+      "payer": {
+        "title": "Payer, child",
+        "placeholder": "Enter your name"
+      }
+    }
+  }
+}
