@@ -1,17 +1,17 @@
 @import "@/shared/assets/styles/components/block";
 
-.filters { 
+.filters {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  
+
   &__block {
     padding: 16px;
     @extend .block;
 
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
