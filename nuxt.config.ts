@@ -70,8 +70,8 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "/lk/fonts/fontawesome/stylesheet.css" }
       ]
     },
-    baseURL: "/lk/",
-    cdnURL: "/lk/"
+    baseURL: "/Seenday-TA/lk/",
+    cdnURL: "/Seenday-TA/lk/"
   },
 
   css: ["~/shared/assets/styles/main.scss"],
